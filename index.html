@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MSI PROJECT Y DETALLES</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f2f5;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2e86de;
+    }
+    p {
+      font-size: 20px;
+    }
+    .boton {
+      background: #2e86de;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .galeria {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .galeria img, .galeria iframe {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    iframe {
+      height: 170px; /* altura para el video */
+    }
+  </style>
+</head>
+<body>
+  <div id="contenido-principal">
+    <h1>Bienvenido a MSI PROJECT Y DETALLES💼</h1>
+    <p>Contactate con la empresa al número 092 824 575 para obtener sus servicios.</p>
+    <button class="boton" onclick="mostrarMedia()">Ver imágenes y video</button>
+  </div>
+
+  <div class="galeria" id="galeria">
+    <h1>Galería de Imágenes y Video 📸🎥</h1>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+      <img src="https://i.imgur.com/0HNOUaH.jpg" alt="Imagen 1">
+      <img src="https://i.imgur.com/wDjEi6F.jpeg" alt="Imagen 2">
+      <!-- Video embebido con iframe de Google Drive -->
+      <iframe src="https://drive.google.com/file/d/1SHRN-sqt0hK8upSds6ZIaVOkM8ja4cQO/preview" allow="autoplay" allowfullscreen></iframe>
+    </div>
+    <button class="boton" style="margin-top: 30px;" onclick="volver()">Volver</button>
+  </div>
+
+  <script>
+    function mostrarMedia() {
+      document.getElementById("contenido-principal").style.display = "none";
+      document.getElementById("galeria").style.display = "flex";
+    }
+
+    function volver() {
+      document.getElementById("galeria").style.display = "none";
+      document.getElementById("contenido-principal").style.display = "block";
+    }
+  </script>
+</body>
+</html>
